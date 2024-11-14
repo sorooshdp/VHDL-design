@@ -1,0 +1,34 @@
+[COMPILESTATUS|.\src\arithmetic_module.vhd]
+FileTimeLow=1373141083
+FileTimeHigh=31143240
+Status=Compiled
+[COMPILESTATUS|.\src\TestBench\arithmetic_module_TB.vhd]
+FileTimeLow=2619434027
+FileTimeHigh=31143240
+Status=Compiled
+[COMPILESTATUS|.\src\TestBench\arithmetic_module_TB_runtest.do]
+FileTimeLow=1510712974
+FileTimeHigh=31143240
+Status=Modified
+[General]
+CurrentVersion=103
+[CACHEDOC|Aldec.Project.Generic.7|.\sixteen_bit_arithmetic\sixteen_bit_arithmetic.adf|]
+Path=/arithmetic_module_tb
+[Gui config]
+RunFor=100 ns
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\sixteen_bit_arithmetic\src/arithmetic_module.vhd|]
+CurrentLine=53
+CurrentColumn=27
+Bookmarks=-1
+BookmarksLength=3
+ZoomFactor=0
+Frame=0
+WindowWorkspaceInfo="LAAAAAAAAAABAAAA//////////////////////MAAACZAAAA/wUAAIkCAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAAAAAAAyAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAEAAAAAAAAAAQAAAA=="
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\sixteen_bit_arithmetic\src/TestBench/arithmetic_module_TB.vhd|]
+CurrentLine=96
+CurrentColumn=45
+Bookmarks=-1
+BookmarksLength=3
+ZoomFactor=0
+Frame=0
+WindowWorkspaceInfo="LAAAAAAAAAABAAAA//////////////////////MAAACZAAAA/wUAAIkCAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAAAAAAAyAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAEAAAAAAAAAAQAAAA=="

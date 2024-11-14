@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: e:/education/Computer-Aided design/my_designs/CADHW02/Decoder/src/TestBench/circuit_with_xor_and_TB.vhd" 
+MESSAGE "Compile Entity "circuit_with_xor_and_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_with_xor_and_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_circuit_with_xor_and"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]" 

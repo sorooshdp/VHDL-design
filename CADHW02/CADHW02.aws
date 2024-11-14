@@ -1,0 +1,16 @@
+[Version]
+Version=13.0
+[Designs]
+decoder=.\Decoder\Decoder.adf
+sixteen_bit_arithmetic=.\sixteen_bit_arithmetic\sixteen_bit_arithmetic.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+decoder=0
+sixteen_bit_arithmetic=1
+[Settings]
+Active=sixteen_bit_arithmetic

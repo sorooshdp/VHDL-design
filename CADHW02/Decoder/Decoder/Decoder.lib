@@ -1,0 +1,79 @@
+timestamp=1731355439191
+
+[~A]
+ModifyID=35
+Version=74
+
+[~MFT]
+0=4|0Decoder.mgf|33535|24833
+1=4|1Decoder.mgf|61939|55620
+3=2|3Decoder.mgf|14402|13030
+
+[circuit_with_xor_and]
+A/behavioral=A/Behavioral 21|../src/custom_circuite.vhd|14|1*58504
+BinW64/behavioral=3*14014
+I=0*15708
+I/behavioral=I/Behavioral 0*32912
+M=11|2|vef|1731339554541|../src/custom_circuite.vhd|0*15237*0x058fd8500acba0aeba285d37080b44ee4f1f13f9|0*15608*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vef|1731355438911|../src/custom_circuite.vhd|0*26165*0xda9cb9aeb540b117b2cf45d704cf52279835d795|0*26802*0x20116f55b147878295aeff36dce7fc50
+R=../src/custom_circuite.vhd|5
+Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|34393dfe426b91a953bdf346aea2f9d60e073f6e44c98d60a2bea400c2eda5ac49197a8f1fe9d95a74b28b46b7643e40
+Version/behavioral=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff42d20a50e0d685f991228ed55cf92ef3d
+
+[circuit_with_xor_and_tb]
+A/tb_architecture=A/TB_ARCHITECTURE 21|../src/TestBench/circuit_with_xor_and_TB.vhd|10|1*60250
+BinW64/tb_architecture=3*14402
+I=0*11779
+I/tb_architecture=I/TB_ARCHITECTURE 0*33214
+M=11|2|vef|1731338990639|../src/TestBench/circuit_with_xor_and_TB.vhd|0*11397*0xea6f1ba8024b95440fe2fd5653be5f1b0ddbd29a|0*11658*0x23b75c12e3e89f2ef000564498faa8c2
+M/tb_architecture=M/TB_ARCHITECTURE 21|2|vef|1731355439170|../src/TestBench/circuit_with_xor_and_TB.vhd|0*30823*0x3957217ac31347d64498db09616fba3551ff7e0a|0*31713*0x20116f55b147878295aeff36dce7fc50
+R=../src/TestBench/circuit_with_xor_and_TB.vhd|6
+Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|34393dfe426b91a953bdf346aea2f9d66ecd5db04c5ffb8afffba5551acb4e8826527262ddaa47cb266f3a3c4d9b973af7641da239b531d41ba4c93c4e090ee8
+Version/tb_architecture=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534beac80a69af892e4f0838454c8b94f7ce7f
+
+[decoder3to8]
+A/behavioral=A/Behavioral 21|../src/decoder_3_to_8.vhd|13|1*34767
+BinW64/behavioral=3*9425
+I=0*596
+I/behavioral=I/Behavioral 0*22634
+M=11|2|vef|1731332591810|../src/decoder_3_to_8.vhd|0*205*0x0dac7d1eed67d9d181fa7658094ecc4cdef5b437|0*506*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vef|1731340243675|../src/decoder_3_to_8.vhd|0*4224*0x2744ade8ce14ea509d6d7e87bae4f17845a53bf5|0*4504*0x20116f55b147878295aeff36dce7fc50
+R=../src/decoder_3_to_8.vhd|5
+Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|f17d50becfc518b5dd69b17470d8b8c169f0b9b4afea9911e97fd3bf1d818bdd0f21c4aacb95e6617de5586146fc145e
+Version/behavioral=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff4292544387ca3f409d82637b76ca9e627
+
+[decoder3to8_tb]
+A/tb_architecture=A/TB_ARCHITECTURE 21|../src/TestBench/decoder3to8_TB.vhd|10|1*35747
+BinW64/tb_architecture=3*9846
+I=0*1943
+I/tb_architecture=I/TB_ARCHITECTURE 0*22890
+M=11|2|vef|1731333872140|../src/TestBench/decoder3to8_TB.vhd|0*1615*0xf8d4fee726180e570eacb54dc8de3f944335bd26|0*1840*0x23b75c12e3e89f2ef000564498faa8c2
+M/tb_architecture=M/TB_ARCHITECTURE 21|2|vef|1731340243941|../src/TestBench/decoder3to8_TB.vhd|0*20838*0x896b12ad85edc094234a5b066e383c3e5972a62e|0*21590*0x20116f55b147878295aeff36dce7fc50
+R=../src/TestBench/decoder3to8_TB.vhd|7
+Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|c0232710c7261bf17e6cbe512de3eb92775dd3d907f8f10f9f983d46ba9c6596dd28a3bb0e08bc9942f03edeffb89e63
+Version/tb_architecture=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bea97358d3137b6179583ba853793c956f0
+
+[testbench_for_circuit_with_xor_and]
+Configures=circuit_with_xor_and_tb.TB_ARCHITECTURE
+E=1*61939
+I=0*33535
+M=2|2|vef|1731355439174|../src/TestBench/circuit_with_xor_and_TB.vhd|0*32174*0x4c0cc422b44e2c9c8d0cbf1359746664dfaf7a4e|0*32564*0x20116f55b147878295aeff36dce7fc50
+R=../src/TestBench/circuit_with_xor_and_TB.vhd|77
+Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5efd636a07bb57613e35fadc81a5c3e545680e9095d0cc46299a9cdf009b39b6cfbacacc2c52e0af7c2fdb996578de4208c0d2a27072d45a60223b839ef92ff4
+
+[testbench_for_decoder3to8]
+Configures=decoder3to8_tb.TB_ARCHITECTURE
+E=1*37193
+I=0*23191
+M=2|2|vef|1731340243945|../src/TestBench/decoder3to8_TB.vhd|0*22013*0x39a73993b265ea84e1f7c8b1954c252211409d41|0*22331*0x20116f55b147878295aeff36dce7fc50
+R=../src/TestBench/decoder3to8_TB.vhd|74
+Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5efd636a07bb57613e35fadc81a5c3e5d847baa524f8bc99ebf28223b90f83cc872eb957c4395c7d4480579d1acf5d18dc73a74e66c2a2e118f998bd7988c5bb
+
+[~U]
+circuit_with_xor_and=11|0*14990|
+circuit_with_xor_and_tb=11|0*11245|
+decoder3to8=11|0*0|
+decoder3to8_tb=11|0*1481|
+testbench_for_circuit_with_xor_and=TESTBENCH_FOR_circuit_with_xor_and 2||
+testbench_for_decoder3to8=TESTBENCH_FOR_decoder3to8 2||
+

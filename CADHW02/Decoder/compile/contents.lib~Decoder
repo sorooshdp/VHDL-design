@@ -1,0 +1,11 @@
+35
+~E 1 "../src/custom_circuite.vhd" 5 circuit_with_xor_and
+~A 1 "../src/custom_circuite.vhd" 14 Behavioral
+~E 1 "../src/TestBench/circuit_with_xor_and_TB.vhd" 6 circuit_with_xor_and_tb
+~A 1 "../src/TestBench/circuit_with_xor_and_TB.vhd" 10 TB_ARCHITECTURE
+~E 1 "../src/decoder_3_to_8.vhd" 5 decoder3to8
+~A 1 "../src/decoder_3_to_8.vhd" 13 Behavioral
+~E 1 "../src/TestBench/decoder3to8_TB.vhd" 7 decoder3to8_tb
+~A 1 "../src/TestBench/decoder3to8_TB.vhd" 10 TB_ARCHITECTURE
+~C 1 "../src/TestBench/circuit_with_xor_and_TB.vhd" 77 testbench_for_circuit_with_xor_and
+~C 1 "../src/TestBench/decoder3to8_TB.vhd" 74 testbench_for_decoder3to8
