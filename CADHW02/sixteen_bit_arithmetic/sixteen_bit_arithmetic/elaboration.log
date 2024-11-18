@@ -1,4 +1,4 @@
-Active-HDL 13.0.375.8320 2024-11-13 12:26:45
+Active-HDL 13.0.375.8320 2024-11-16 16:52:29
 
 Elaboration top modules:
 VHDL Configuration            testbench_for_arithmetic_module
@@ -33,3 +33,7 @@ ieee                                   | Standard IEEE packages library
 sixteen_bit_arithmetic                 | None
 std                                    | Standard VHDL library
 -------------------------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim +access +r TESTBENCH_FOR_arithmetic_module
+

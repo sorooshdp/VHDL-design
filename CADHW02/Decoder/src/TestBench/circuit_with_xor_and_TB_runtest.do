@@ -1,5 +1,5 @@
 SetActiveLib -work
-comp -include "$dsn\src\custom_circuite.vhd" 
+comp -include "$dsn\src\custom_circuit.vhd" 
 comp -include "$dsn\src\TestBench\circuit_with_xor_and_TB.vhd" 
 asim +access +r TESTBENCH_FOR_circuit_with_xor_and 
 wave 

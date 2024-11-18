@@ -1,5 +1,5 @@
 SetActiveLib -work
-comp -include "$dsn\src\decoder_3_to_8.vhd" 
+comp -include "$dsn\src\3-to-8-decoder.vhd" 
 comp -include "$dsn\src\TestBench\decoder3to8_TB.vhd" 
 asim +access +r TESTBENCH_FOR_decoder3to8 
 wave 

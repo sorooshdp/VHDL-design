@@ -1,4 +1,4 @@
-Active-HDL 13.0.375.8320 2024-11-13 00:46:29
+Active-HDL 13.0.375.8320 2024-11-16 16:19:44
 
 Elaboration top modules:
 VHDL Configuration            testbench_for_circuit_with_xor_and
@@ -34,3 +34,7 @@ decoder                                   | None
 ieee                                      | Standard IEEE packages library
 std                                       | Standard VHDL library
 -------------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim +access +r TESTBENCH_FOR_circuit_with_xor_and
+

@@ -19,7 +19,7 @@ architecture Behavioral of arithmetic_module is
 begin
     process(A, B, fn, Cin)
         variable A_ext, B_ext, Cin_ext: signed(16 downto 0);
-        variable Result_s              : signed(16 downto 0);
+        variable Result_s             : signed(16 downto 0);
     begin
         A_ext := ('0' & signed(A));
         B_ext := ('0' & signed(B));

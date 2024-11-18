@@ -3,4 +3,4 @@ MESSAGE "File: E:/education/Computer-Aided design/my_designs/CADHW02/sixteen_bit
 MESSAGE "Compile Entity "arithmetic_module_tb"" 
 MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "arithmetic_module_tb"" 
 MESSAGE "Compile Configuration "TESTBENCH_FOR_arithmetic_module"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]" 

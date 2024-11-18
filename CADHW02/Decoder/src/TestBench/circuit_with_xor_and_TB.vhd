@@ -37,16 +37,16 @@ begin
 			out_final => out_final
 		);
 
-	-- Add your stimulus here ...	 
-	    -- Stimulus process
-    stim_proc: process
+	-- Add your stimulus here ...
+	
+	stim_proc: process
     begin
         -- Enable the decoder
         en <= '1';
 
         -- Test case 1: sel = "000"
         sel <= "000"; wait for 10 ns;
-		
+    
         -- Test case 1: sel = "001"
         sel <= "001"; wait for 10 ns;
 
@@ -58,10 +58,10 @@ begin
 
         -- Test case 3: sel = "100"
         sel <= "100"; wait for 10 ns;
-		
+    
         -- Test case 3: sel = "101"
         sel <= "101"; wait for 10 ns;
-		
+    
         -- Test case 3: sel = "110"
         sel <= "110"; wait for 10 ns;
 

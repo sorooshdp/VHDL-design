@@ -1,6 +1,6 @@
-5
+10
 ~E 1 "../src/arithmetic_module.vhd" 6 arithmetic_module
 ~A 1 "../src/arithmetic_module.vhd" 18 Behavioral
 ~E 1 "../src/TestBench/arithmetic_module_TB.vhd" 7 arithmetic_module_tb
 ~A 1 "../src/TestBench/arithmetic_module_TB.vhd" 10 TB_ARCHITECTURE
-~C 1 "../src/TestBench/arithmetic_module_TB.vhd" 113 testbench_for_arithmetic_module
+~C 1 "../src/TestBench/arithmetic_module_TB.vhd" 112 testbench_for_arithmetic_module
