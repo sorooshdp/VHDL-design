@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: E:/education/Computer-Aided design/my_designs/CADHW03/serial_to_parallel/src/TestBench/serial_to_parallel_TB.vhd" 
+MESSAGE "Compile Entity "serial_to_parallel_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "serial_to_parallel_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_serial_to_parallel"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]" 

@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: E:/education/Computer-Aided design/my_designs/CADHW03/CADHW03/src/TestBench/delay_examples_TB.vhd" 
+MESSAGE "Compile Entity "delay_examples_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "delay_examples_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_delay_examples"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]" 

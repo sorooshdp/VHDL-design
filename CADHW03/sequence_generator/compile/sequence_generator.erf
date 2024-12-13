@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: E:/education/Computer-Aided design/my_designs/CADHW03/sequence_generator/src/TestBench/sequence_generator_TB.vhd" 
+MESSAGE "Compile Entity "sequence_generator_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "sequence_generator_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_sequence_generator"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]" 

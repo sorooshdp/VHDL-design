@@ -1,0 +1,6 @@
+54
+~E 1 "../src/circuit.vhd" 5 circuit
+~A 1 "../src/circuit.vhd" 13 circuit
+~E 1 "../src/TestBench/circuit_TB.vhd" 7 circuit_tb
+~A 1 "../src/TestBench/circuit_TB.vhd" 10 TB_ARCHITECTURE
+~C 1 "../src/TestBench/circuit_TB.vhd" 67 testbench_for_circuit

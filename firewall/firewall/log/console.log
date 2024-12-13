@@ -1,0 +1,2217 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6596 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  08:51 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 82819645 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
+# Error: COMP96_0019: firewall.vhd : (78, 7): Keyword 'end' expected.
+# Error: COMP96_0016: firewall.vhd : (78, 12): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Error: COMP96_0329: firewall.vhd : (78, 2): Generate statement must have a label.
+# Error: COMP96_0019: firewall.vhd : (78, 27): Keyword 'generate' expected.
+# Error: COMP96_0019: firewall.vhd : (81, 2): Keyword 'end' expected.
+# Error: COMP96_0016: firewall.vhd : (81, 8): Design unit declaration expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Error: COMP96_0077: firewall.vhd : (77, 56): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Error: COMP96_0077: firewall.vhd : (77, 56): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Error: COMP96_0393: firewall.vhd : (77, 56): Cannot read output : "frame_out".
+# Error: COMP96_0077: firewall.vhd : (77, 56): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0393: firewall.vhd : (78, 50): Cannot read output : "valid_out".
+# Error: COMP96_0077: firewall.vhd : (78, 50): Undefined type of expression. Expected type 'STD_ULOGIC'.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.2 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6596 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:25 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 58554055 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:32 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 84048970 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6598 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:33 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 72519985 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:43 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 67646225 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
+# Error: COMP96_0015: firewall.vhd : (85, 21): ';' expected.
+# Error: COMP96_0019: firewall.vhd : (85, 47): Keyword 'end' expected.
+# Error: COMP96_0015: firewall.vhd : (87, 8): ';' expected.
+# Error: COMP96_0016: firewall.vhd : (87, 15): Design unit declaration expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:46 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 39877830 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:48 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 22134035 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:51 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 42247805 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:53 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 39703345 ns
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+testbench_for_firewall testbench_for_firewall
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:53 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 201235610 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  09:54 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 67436555 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:14 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 50 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 50 ns + 0.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+testbench_for_firewall testbench_for_firewall
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:14 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 50 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 50 ns + 0.
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:14 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 50 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 50 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  79.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:15 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 39528680 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:16 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 20 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 20 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:17 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 20 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 20 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6596 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:17 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 90 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 50010645 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:19 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 120 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 54829630 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Error: COMP96_0015: TestBench/firewall_TB.vhd : (82, 15): ';' expected.
+# Error: COMP96_0019: TestBench/firewall_TB.vhd : (82, 15): Keyword 'end' expected.
+# Error: COMP96_0019: TestBench/firewall_TB.vhd : (83, 9): Keyword 'end' expected.
+# Error: COMP96_0016: TestBench/firewall_TB.vhd : (83, 14): Design unit declaration expected.
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile failure 4 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Error: COMP96_0015: TestBench/firewall_TB.vhd : (82, 13): '<=' expected.
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:22 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 50 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 50 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:22 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 50 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 50 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:23 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 50 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 50 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:23 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 52019895 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:24 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 130 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 130 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:25 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 130 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 130 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:27 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 3 Failed: Invalid Source MAC not rejected
+# EXECUTION:: Time: 130 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 130 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:28 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 180 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 57249970 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:33 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 70 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 70 ns + 0.
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6031 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:34 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: FAILURE: Test Case 1 Failed: Valid frame not recognized
+# EXECUTION:: Time: 70 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+# KERNEL: Stopped at time 70 ns + 0.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  79.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.1 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:34 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 260 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 30650470 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Error: COMP96_0753: TestBench/firewall_TB.vhd : (79, 56): Cannot find the "&" operator with operands denoted with the "[STRING, STD_LOGIC_VECTOR]" signature.
+# Error: COMP96_0077: TestBench/firewall_TB.vhd : (79, 21): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  93.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:36 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 260 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 30819995 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:37 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 240 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 45957105 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  93.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.1 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6597 kB (elbread=427 elab2=6030 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:38 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+wave -noreg state_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 6 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 250 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 39064010 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Error: COMP96_0078: firewall.vhd : (81, 5): Unknown identifier "state_out".
+# Error: COMP96_0133: firewall.vhd : (81, 5): Cannot find object declaration.
+# Error: COMP96_0078: firewall.vhd : (81, 18): Unknown identifier "state_signal".
+# Compile failure 3 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/firewall.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work firewall -2002  $dsn/src/TestBench/firewall_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6595 kB (elbread=427 elab2=6029 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:53 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 250 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 30693 us
+# VSIM: Simulation has finished.
+SetActiveLib -work
+comp -include "$dsn\src\firewall.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/firewall.vhd
+# Compile Entity "firewall"
+# Compile Architecture "firewall" of Entity "firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+comp -include "$dsn\src\TestBench\firewall_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/firewall/firewall/src/TestBench/firewall_TB.vhd
+# Compile Entity "firewall_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "firewall_tb"
+# Compile Configuration "TESTBENCH_FOR_firewall"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+asim +access +r TESTBENCH_FOR_firewall 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6595 kB (elbread=427 elab2=6029 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\firewall\firewall\src\wave.asdb
+#  10:54 ».Ÿ, Å‰Ã‘‰»Â, 22 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg frame_in
+wave -noreg frame_out
+wave -noreg valid_out
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\firewall_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_firewall 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/firewall/firewall/src/wave.asdb'.
+# add wave -noreg {/firewall_tb/UUT/current_state}
+# add wave -noreg {/firewall_tb/UUT/next_state}
+# VSIM: 2 object(s) traced.
+run
+# EXECUTION:: NOTE   : All test cases passed successfully!
+# EXECUTION:: Time: 250 ns,  Iteration: 0,  Instance: /firewall_tb,  Process: stim_proc.
+endsim
+# KERNEL: stopped at time: 37109435 ns
+# VSIM: Simulation has finished.

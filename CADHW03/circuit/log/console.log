@@ -1,0 +1,648 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.2 [s].
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom -O3 -e 100 -work circuit -2002  $dsn/src/TestBench/circuit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5440 kB (elbread=427 elab2=4873 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  11:21 ﬁ.Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg y
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 3 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 39035575 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Error: COMP96_0122: circuit.vhd : (16, 1): Symbol "r1" has already been declared in this scope.
+# Error: COMP96_0122: circuit.vhd : (16, 1): Symbol "r2" has already been declared in this scope.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work circuit -2002  $dsn/src/TestBench/circuit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Error: COMP96_0015: TestBench/circuit_TB.vhd : (61, 3): ';' expected.
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work circuit -2002  $dsn/src/TestBench/circuit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6464 kB (elbread=427 elab2=5898 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  11:34 ﬁ.Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 39057740 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work circuit -2002  $dsn/src/TestBench/circuit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6465 kB (elbread=427 elab2=5898 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  12:03 ».Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 34232265 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6465 kB (elbread=427 elab2=5898 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  12:23 ».Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 39144340 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Error: COMP96_0018: circuit.vhd : (11, 2): Identifier expected.
+# Compile Architecture "circuit" of Entity "circuit"
+# Error: COMP96_0078: circuit.vhd : (36, 2): Unknown identifier "q".
+# Error: COMP96_0133: circuit.vhd : (36, 2): Cannot find object declaration.
+# Error: COMP96_0078: circuit.vhd : (37, 2): Unknown identifier "w".
+# Error: COMP96_0133: circuit.vhd : (37, 2): Cannot find object declaration.
+# Error: COMP96_0078: circuit.vhd : (38, 2): Unknown identifier "e".
+# Error: COMP96_0133: circuit.vhd : (38, 2): Cannot find object declaration.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work circuit -2002  $dsn/src/TestBench/circuit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6465 kB (elbread=427 elab2=5899 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  12:26 ».Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+wave -noreg q
+wave -noreg w
+wave -noreg e
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 8 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 15221015 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work circuit -2002  $dsn/src/TestBench/circuit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6464 kB (elbread=427 elab2=5898 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  12:28 ».Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 19215285 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6464 kB (elbread=427 elab2=5898 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  12:35 ».Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 16609765 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/circuit.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6464 kB (elbread=427 elab2=5898 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  12:39 ».Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 21985560 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/TestBench/circuit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6464 kB (elbread=427 elab2=5898 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  12:41 ».Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 21315835 ns
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work circuit -2002  $dsn/src/TestBench/circuit_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\circuit.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/circuit.vhd
+# Compile Entity "circuit"
+# Compile Architecture "circuit" of Entity "circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+comp -include "$dsn\src\TestBench\circuit_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd
+# Compile Entity "circuit_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"
+# Compile Configuration "TESTBENCH_FOR_circuit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim +access +r TESTBENCH_FOR_circuit 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6464 kB (elbread=427 elab2=5898 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location E:\education\Computer-Aided design\my_designs\CADHW03\circuit\src\wave.asdb
+#  12:46 ».Ÿ, ‘‰»Â, 17 ¬–— 1403
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+wave -noreg x
+wave -noreg y
+wave -noreg z
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\circuit_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_circuit 
+# VSIM: 5 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/wave.asdb'.
+run
+endsim
+# KERNEL: stopped at time: 17293395 ns
+# VSIM: Simulation has finished.
+# Design: Design "CADHW03" has been set as active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.1 [s].

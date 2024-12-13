@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: e:/education/Computer-Aided design/my_designs/BCD_counter/BCD_counter/src/TestBench/bcd_counter_TB.vhd" 
+MESSAGE "Compile Entity "bcd_counter_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "bcd_counter_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_bcd_counter"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]" 

@@ -1,0 +1,29 @@
+[General]
+CurrentVersion=103
+[CACHEDOC|Aldec.Project.Generic.7|.\CADHW03\CADHW03.adf|]
+Path=
+[COMPILESTATUS|.\src\delay.vhd]
+FileTimeLow=859092569
+FileTimeHigh=31146783
+Status=Compiled
+[COMPILESTATUS|.\src\TestBench\delay_examples_TB.vhd]
+FileTimeLow=2227166512
+FileTimeHigh=31146799
+Status=Compiled
+[COMPILESTATUS|.\src\TestBench\delay_examples_TB_runtest.do]
+FileTimeLow=1034501488
+FileTimeHigh=31146783
+Status=Modified
+[CACHEDOC|Aldec.Project.Generic.7|.\shift\shift.adf|]
+Path=
+[CACHEDOC|Aldec.Project.Generic.7|.\serial_to_parallel_converter\serial_to_parallel_converter.adf|]
+Path=/serialtoparallel_tb
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+Built-in symbols=0
+cadhw03=0
+serial_to_parallel=0
+shift_register_64_bit=0
+[CACHEDOC|Aldec.Project.Generic.7|.\shift_register_64_bit\shift_register_64_bit.adf|]
+Path=/shift_register
+[Gui config]
+RunFor=100 ns

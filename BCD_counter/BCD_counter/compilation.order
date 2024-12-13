@@ -1,0 +1,2 @@
+.\src\counter.vhd
+.\src\TestBench\bcd_counter_TB.vhd

@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: E:/education/Computer-Aided design/my_designs/CADHW03/circuit/src/TestBench/circuit_TB.vhd" 
+MESSAGE "Compile Entity "circuit_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "circuit_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_circuit"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]" 
