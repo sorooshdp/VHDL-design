@@ -1,0 +1,119 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
+C:/Documents and Settings/Administrator/Desktop/MazeGame/iseconfig/filter.filter
+-intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr
+game.pcf -ucf UCF.ucf
+
+Design file:              game.ncd
+Physical constraint file: game.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLOCK_24
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+Key<0>      |    6.577(R)|      SLOW  |   -0.641(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+Key<1>      |    8.002(R)|      SLOW  |   -0.811(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+Key<2>      |    7.677(R)|      SLOW  |   -0.718(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+Key<3>      |    7.165(R)|      SLOW  |   -0.794(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLOCK_24 to Pad
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+                |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination     |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<0>          |        15.613(R)|      SLOW  |         5.689(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+LED<1>          |        15.565(R)|      SLOW  |         5.844(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+LED<2>          |        15.599(R)|      SLOW  |         6.160(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+LED<3>          |        15.478(R)|      SLOW  |         5.667(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+LED<4>          |        15.087(R)|      SLOW  |         5.276(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+VGA_B<0>        |        23.092(R)|      SLOW  |         4.502(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+VGA_B<1>        |        22.695(R)|      SLOW  |         4.267(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+VGA_G<0>        |        23.417(R)|      SLOW  |         5.021(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+VGA_G<1>        |        22.599(R)|      SLOW  |         4.731(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+VGA_HS          |        10.422(R)|      SLOW  |         4.171(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+VGA_R<0>        |        28.233(R)|      SLOW  |         4.580(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+VGA_R<1>        |        27.620(R)|      SLOW  |         4.237(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+VGA_VS          |        11.587(R)|      SLOW  |         3.983(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+outseg<0>       |         9.024(R)|      SLOW  |         3.676(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+outseg<1>       |         8.818(R)|      SLOW  |         3.562(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+outseg<2>       |         8.981(R)|      SLOW  |         3.688(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+outseg<3>       |         9.156(R)|      SLOW  |         3.756(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+sevensegments<0>|         8.950(R)|      SLOW  |         3.619(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+sevensegments<1>|         9.099(R)|      SLOW  |         3.746(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+sevensegments<2>|         9.286(R)|      SLOW  |         3.779(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+sevensegments<3>|         9.179(R)|      SLOW  |         3.758(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+sevensegments<4>|         8.884(R)|      SLOW  |         3.576(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+sevensegments<5>|         9.203(R)|      SLOW  |         3.826(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+sevensegments<6>|        10.023(R)|      SLOW  |         4.216(R)|      FAST  |CLOCK_24_BUFGP    |   0.000|
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock RESET_N to Pad
+------------+-----------------+------------+-----------------+------------+----------------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                 | Phase  |
+------------+-----------------+------------+-----------------+------------+----------------------------------+--------+
+VGA_B<0>    |        27.844(F)|      SLOW  |        11.625(F)|      FAST  |reset_signal_game_over_OR_5_o_BUFG|   0.000|
+VGA_B<1>    |        27.447(F)|      SLOW  |        11.390(F)|      FAST  |reset_signal_game_over_OR_5_o_BUFG|   0.000|
+VGA_G<0>    |        26.324(F)|      SLOW  |        11.175(F)|      FAST  |reset_signal_game_over_OR_5_o_BUFG|   0.000|
+VGA_G<1>    |        26.530(F)|      SLOW  |        11.481(F)|      FAST  |reset_signal_game_over_OR_5_o_BUFG|   0.000|
+VGA_R<0>    |        28.875(F)|      SLOW  |        12.012(F)|      FAST  |reset_signal_game_over_OR_5_o_BUFG|   0.000|
+VGA_R<1>    |        28.262(F)|      SLOW  |        11.669(F)|      FAST  |reset_signal_game_over_OR_5_o_BUFG|   0.000|
+------------+-----------------+------------+-----------------+------------+----------------------------------+--------+
+
+Clock to Setup on destination clock CLOCK_24
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_24       |   15.367|         |         |         |
+RESET_N        |   13.056|   19.685|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RESET_N
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_24       |         |         |    5.361|         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sun Jan 26 03:48:41 2025 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 268 MB
+
+
+

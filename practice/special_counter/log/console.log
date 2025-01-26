@@ -1,0 +1,34 @@
+acom -reorder -O3 -e 100 -work special_counter -2002  $dsn/src/circle.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: e:/education/Computer-Aided design/my_designs/practice/special_counter/src/circle.vhd
+# Compile Entity "circle"
+# Compile Architecture "circle" of Entity "circle"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# File: e:/education/Computer-Aided design/my_designs/practice/special_counter/src/circle.vhd
+# Compile Entity "circle"
+# Error: COMP96_0078: circle.vhd : (6, 15): Unknown identifier "logic".
+# Error: COMP96_0064: circle.vhd : (6, 15): Unknown type.
+# Error: COMP96_0064: circle.vhd : (6, 11): Unknown type.
+# Error: COMP96_0078: circle.vhd : (7, 17): Unknown identifier "logic".
+# Error: COMP96_0064: circle.vhd : (7, 17): Unknown type.
+# Error: COMP96_0064: circle.vhd : (7, 13): Unknown type.
+# Error: COMP96_0019: circle.vhd : (19, 4): Keyword 'then' expected.
+# Error: COMP96_0015: circle.vhd : (26, 6): ';' expected.
+# Error: COMP96_0019: circle.vhd : (36, 7): Keyword 'process' expected.
+# Error: COMP96_0015: circle.vhd : (37, 6): ';' expected.
+# Error: COMP96_0016: circle.vhd : (37, 13): Design unit declaration expected.
+# Compile failure 11 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom -reorder -O3 -e 100 -work special_counter -2002  $dsn/src/circle.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: e:/education/Computer-Aided design/my_designs/practice/special_counter/src/circle.vhd
+# Compile Entity "circle"
+# Compile Architecture "circle" of Entity "circle"
+# Error: COMP96_0015: circle.vhd : (7, 2): ';' expected.
+# Error: COMP96_0019: circle.vhd : (19, 4): Keyword 'then' expected.
+# Error: COMP96_0015: circle.vhd : (26, 6): ';' expected.
+# Error: COMP96_0019: circle.vhd : (36, 7): Keyword 'process' expected.
+# Error: COMP96_0015: circle.vhd : (37, 6): ';' expected.
+# Error: COMP96_0016: circle.vhd : (37, 13): Design unit declaration expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  62.0 [ms]
+# Design: Design "prac" has been set as active.

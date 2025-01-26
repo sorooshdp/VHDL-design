@@ -1,0 +1,38 @@
+acom -O3 -e 100 -work prac -2002  $dsn/src/Fifo.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/practice/prac/src/Fifo.vhd
+# Compile Entity "Fifo"
+# Compile Architecture "Fifo" of Entity "Fifo"
+# Error: COMP96_0015: Fifo.vhd : (36, 9): ';' expected.
+# Error: COMP96_0019: Fifo.vhd : (36, 9): Keyword 'end' expected.
+# Error: COMP96_0015: Fifo.vhd : (45, 9): ';' expected.
+# Error: COMP96_0019: Fifo.vhd : (45, 9): Keyword 'end' expected.
+# Error: COMP96_0015: Fifo.vhd : (47, 9): ';' expected.
+# Error: COMP96_0019: Fifo.vhd : (47, 9): Keyword 'end' expected.
+# Error: COMP96_0019: Fifo.vhd : (48, 9): Keyword 'process' expected.
+# Error: COMP96_0015: Fifo.vhd : (49, 8): ';' expected.
+# Error: COMP96_0016: Fifo.vhd : (49, 10): Design unit declaration expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work prac -2002  $dsn/src/Fifo.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/practice/prac/src/Fifo.vhd
+# Compile Entity "Fifo"
+# Compile Architecture "Fifo" of Entity "Fifo"
+# Error: COMP96_0343: Fifo.vhd : (32, 5): "memory" is not a procedure name.
+# Error: COMP96_0066: Fifo.vhd : (32, 5): Cannot find "memory" procedure declaration.
+# Error: COMP96_0077: Fifo.vhd : (45, 12): Undefined type of expression. Expected type 'UNSIGNED'.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work prac -2002  $dsn/src/Fifo.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/practice/prac/src/Fifo.vhd
+# Compile Entity "Fifo"
+# Compile Architecture "Fifo" of Entity "Fifo"
+# Error: COMP96_0343: Fifo.vhd : (32, 5): "memory" is not a procedure name.
+# Error: COMP96_0066: Fifo.vhd : (32, 5): Cannot find "memory" procedure declaration.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -O3 -e 100 -work prac -2002  $dsn/src/Fifo.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: E:/education/Computer-Aided design/my_designs/practice/prac/src/Fifo.vhd
+# Compile Entity "Fifo"
+# Compile Architecture "Fifo" of Entity "Fifo"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]

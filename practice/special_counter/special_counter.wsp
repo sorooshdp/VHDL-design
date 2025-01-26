@@ -1,0 +1,19 @@
+[COMPILESTATUS|.\src\special_counter.vhd]
+FileTimeLow=4017403183
+FileTimeHigh=31154095
+Status=Modified
+[COMPILESTATUS|.\src\circle.vhd]
+FileTimeLow=2018602154
+FileTimeHigh=31154195
+Status=Modified
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+Built-in symbols=0
+prac=0
+special_counter=0
+decoder=0
+[General]
+CurrentVersion=103
+[CACHEDOC|Aldec.Project.Generic.7|.\special_counter\special_counter.adf|]
+Path=
+[Gui config]
+RunFor=100 ns

@@ -1,0 +1,4 @@
+.\src\circuit.vhd
+.\src\DualPortRam.vhd
+.\src\Queue.vhd
+.\src\Fifo.vhd
