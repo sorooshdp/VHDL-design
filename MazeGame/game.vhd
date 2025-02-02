@@ -24,15 +24,12 @@ architecture Behavioral of game is
     constant GRID_HEIGHT : integer := 15;
     constant CELL_SIZE : integer := 32;
 	 constant SYMBOL_SIZE : integer := 8;  -- 8x8 symbols
-    constant SYMBOL_OFFSET : integer := (CELL_SIZE - SYMBOL_SIZE)/2;  -- Center symbol in cell
-	 
+    constant SYMBOL_OFFSET : integer := (CELL_SIZE - SYMBOL_SIZE)/2;  -- Center symbol in cell	 
     constant PLAYER_SIZE : integer := 16;  -- Slightly smaller than cell
-    signal MOVE_DELAY_MAX : integer := 500_000;  -- Now a mutable signal
-	
 	 constant END_X : integer := GRID_WIDTH-2;  -- Second to last column
 	 constant END_Y : integer := GRID_HEIGHT-2; -- Second to last row
-	 
 	 constant PLAYER_SPEED : integer := 1;  -- Pixels per movement update
+	 constant COLLISION_COOLDOWN_MAX : integer := 12_000_000;  -- 0.5 seconds at 24MHz
 	  
     -- VGA Component
     component vga is
@@ -58,8 +55,7 @@ architecture Behavioral of game is
     --   bit0 = left wall
     -- '1' means the wall is present, '0' means the wall is removed.
 	 type wall_bits is array(0 to GRID_HEIGHT - 1, 0 to GRID_WIDTH - 1)of std_logic_vector(3 downto 0);
-	 signal mazeWalls : wall_bits;
-	 
+	 signal mazeWalls : wall_bits; 
 	 type visited_array is array(0 to GRID_HEIGHT - 1, 0 to GRID_WIDTH - 1) of std_logic;
 	 signal visited : visited_array;
 	  
@@ -70,6 +66,7 @@ architecture Behavioral of game is
     signal stackRow : stack_array;
     signal stackCol : stack_array;
     signal stackPtr : integer range 0 to MAX_STACK_SIZE := 0;
+	 signal collision_cooldown : integer range 0 to COLLISION_COOLDOWN_MAX := 0;
 	 
 	 ------------------------------------------------------------------------
     -- Player position (in grid coordinates)
@@ -78,17 +75,16 @@ architecture Behavioral of game is
     -- signal player_y : integer range 0 to GRID_HEIGHT-1 := 1;
 	 signal player_pixel_x : integer range 0 to GRID_WIDTH * CELL_SIZE := CELL_SIZE / 2;
 	 signal player_pixel_y : integer range 0 to GRID_HEIGHT * CELL_SIZE := CELL_SIZE / 2;
-	 signal player_lives : integer range 0 to 5 := 5;
-	 
+	 signal player_lives : integer range 0 to 5 := 5;	 
 	 signal collision_pulse : std_logic := '0';
 	 signal game_over : std_logic := '0';
+	 signal MOVE_DELAY_MAX : integer range 0 to 500_000 := 500_000;  -- Now a mutable signal
 	 
 	 ------------------------------------------------------------------------
     -- Button & movement control
     ------------------------------------------------------------------------
     --signal btn_prev   : std_logic_vector(3 downto 0) := (others => '0');
     signal move_delay : integer range 0 to 12000000 := 0;
-
     signal pseudo_rand   : std_logic_vector(31 downto 0) := x"ACE1_2467";
     signal reset_count   : unsigned(3 downto 0) := (others => '0');  -- Add this
     signal reset_signal  : std_logic;
@@ -134,62 +130,61 @@ architecture Behavioral of game is
 
 	 signal mapchange_x, mapchange_y : integer range 0 to GRID_WIDTH-1 := 10;
 	 signal mapchange_active : std_logic := '1';
-
 	 
-	 signal regenerate_request : std_logic := '0';  -- Movement process
-    signal regenerate_ack : std_logic := '0';      -- Maze process
+	 signal regenerate_req : std_logic := '0';
+	 signal regenrate_ack  : std_logic := '0'; 
 	 
 	 
-			-- Symbol patterns (1 = draw, 0 = transparent)
-			type symbol_array is array(0 to 7) of std_logic_vector(7 downto 0);
+	  -- Symbol patterns (1 = draw, 0 = transparent)
+	 type symbol_array is array(0 to 7) of std_logic_vector(7 downto 0);
 
-			-- Ghost: "?" symbol
-			constant GHOST_SYMBOL : symbol_array := (
-				 "00111100",  --   ****  
-				 "01000010",  --  *    * 
-				 "10000001",  -- *      *
-				 "00000001",  --        *
-				 "00011000",  --    **   
-				 "00011000",  --         
-				 "00011000",  --    **   
-				 "00011000"   --         
-			);
+     -- Ghost: "?" symbol
+	  constant GHOST_SYMBOL : symbol_array := (
+			 "00111100",  --   ****  
+			 "01000010",  --  *    * 
+			 "10000001",  -- *      *
+			 "00001111",  --        *
+			 "00011000",  --    **   
+			 "00011000",  --         
+			 "00000000",  --    **   
+			 "00011000"   --         
+	  );
 
-			-- Shrink: "S" symbol 
-			constant SHRINK_SYMBOL : symbol_array := (
-				 "01111110",  --  ****** 
-				 "11000000",  -- **      
-				 "01111100",  --  *****  
-				 "00000110",  --      ** 
-				 "00000110",  --      ** 
-				 "11001100",  -- **  **  
-				 "01111000",  --  ****   
-				 "00000000"   --         
-			);
+		-- Shrink: "S" symbol 
+	  constant SHRINK_SYMBOL : symbol_array := (
+			 "01111110",  --  ****** 
+			 "11000000",  -- **      
+			 "01111100",  --  *****  
+			 "00000110",  --      ** 
+			 "00000110",  --      ** 
+			 "11001100",  -- **  **  
+			 "01111000",  --  ****   
+			 "00000000"   --         
+		);
 
-			-- Speed: "!" symbol
-			constant SPEED_SYMBOL : symbol_array := (
-				 "00011000",  --    **   
-				 "00011000",  --    **   
-				 "00011000",  --    **   
-				 "00011000",  --    **   
-				 "00011000",  --    **   
-				 "00000000",  --         
-				 "00011000",  --    **   
-				 "00000000"   --         
-			);
+		-- Speed: "!" symbol
+		constant SPEED_SYMBOL : symbol_array := (
+			 "00111000",  --    **   
+			 "00111000",  --    **   
+			 "00111000",  --    **   
+			 "00111000",  --    **   
+			 "00111000",  --    **   
+			 "00000000",  --         
+			 "00111000",  --    **   
+			 "00111000"   --         
+		);
 
-			-- Mapchange: "M" symbol
-			constant MAPCHANGE_SYMBOL : symbol_array := (
-				 "10000001",  -- *      *
-				 "11000011",  -- **    **
-				 "10100101",  -- * *  * *
-				 "10011001",  -- *  **  *
-				 "10011001",  -- *  **  *
-				 "10100101",  -- * *  * *
-				 "11000011",  -- **    **
-				 "10000001"   -- *      *
-			);
+		-- Mapchange: "M" symbol
+		constant MAPCHANGE_SYMBOL : symbol_array := (
+			 "10000001",  -- *      *
+			 "11000011",  -- **    **
+			 "11100111",  -- * *  * *
+			 "11111111",  -- *  **  *
+			 "11111111",  -- *  **  *
+			 "11100111",  -- ***  * *
+			 "11000011",  -- **    **
+			 "10000001"   -- *      *
+		);
 	 
 
     -- A small helper to decode a single decimal digit (0..9) into 7-segment bits.
@@ -219,7 +214,7 @@ architecture Behavioral of game is
         return x(30 downto 0) & (x(0) xnor x(1) xnor x(21) xnor x(31));
     end function;
 
-		begin
+	 begin
 			 reset_signal <= not RESET_N;
 
 			 vga_inst : vga
@@ -253,17 +248,14 @@ architecture Behavioral of game is
 					 end if;
 				end process;
 			 
-
 			 -- Maze generation + DFS state machine	
-				process(CLOCK_24, reset_signal)
+				process(CLOCK_24, reset_signal, pseudo_rand, regenerate_req)
 					variable neighbors : std_logic_vector(3 downto 0);
 					variable nCount : integer range 0 to 4;
 					variable idx : integer range 0 to 3;
 					variable next_r, next_c : integer;
 				begin
-				
-					if reset_signal = '1' then 
-					   regenerate_ack <= '0';
+					if reset_signal = '1' or regenerate_req = '1' then 
 						gen_state <= GEN_IDLE;
 						stackPtr  <= 0;
 						-- Initialize all walls to '1111' (all present)
@@ -274,8 +266,6 @@ architecture Behavioral of game is
 							 end loop;
 						end loop;
 					elsif rising_edge(CLOCK_24) then 
-						regenerate_ack <= '0';  -- Default
-
 						case gen_state is 						
 							when GEN_IDLE =>
 								  cur_row <= 0;
@@ -299,7 +289,6 @@ architecture Behavioral of game is
 							when GEN_BACKTRACK =>
 								neighbors := (others => '0');
 								nCount := 0;
-								
 								  -- Up neighbor
 								  if (cur_row > 0) and (visited(cur_row-1, cur_col2)='0') then
 										neighbors(3) := '1';
@@ -385,13 +374,16 @@ architecture Behavioral of game is
 					end if;
 				end process;
 					
-				process(CLOCK_24, reset_signal, game_over)
+				process(CLOCK_24, reset_signal, game_over, pseudo_rand)
 				   variable next_pixel_x, next_pixel_y : integer;
 					variable current_grid_x, current_grid_y : integer;
 					variable collision_occurred : std_logic := '0';
 					--variable next_x, next_y : integer;
 				begin
 					if reset_signal = '1' or game_over = '1' then
+						regenerate_req <= '0';
+					
+						collision_cooldown <= 0;
 					
 						player_pixel_x   <= CELL_SIZE / 2;  -- Start at center of first cell
 						player_pixel_y   <= CELL_SIZE / 2;
@@ -426,6 +418,8 @@ architecture Behavioral of game is
 						mapchange_y <= to_integer(unsigned(pseudo_rand(24 downto 20))) mod GRID_HEIGHT;
 						
 					elsif rising_edge(CLOCK_24) then
+						mapchange_y <= mapchange_y;
+						mapchange_x <= mapchange_x;
 					   current_grid_x := player_pixel_x / CELL_SIZE;
 						current_grid_y := player_pixel_y / CELL_SIZE;
 						collision_occurred := '0';
@@ -433,8 +427,7 @@ architecture Behavioral of game is
 						if move_delay = 0 then	
                        next_pixel_x := player_pixel_x;
 							  next_pixel_y := player_pixel_y;
-							  
-							  
+							  			  
 							  case Key is
 									when "1110" =>  -- Up
 										if ghost_powerup = '0' then
@@ -526,8 +519,13 @@ architecture Behavioral of game is
 						end if;
 						
 						if collision_pulse = '1' and gameStarted = '1' and player_lives > 0 then
-								player_lives <= player_lives - 1;
-						else player_lives <= player_lives; end if;
+								    if collision_cooldown = 0 then
+										  player_lives <= player_lives - 1;
+										  collision_cooldown <= COLLISION_COOLDOWN_MAX;  -- Start cooldown
+									 end if;
+						elsif collision_cooldown > 0 then
+									 collision_cooldown <= collision_cooldown - 1;
+						end if;
 						
 						if countdownVal = 0 or (current_grid_x = END_X and current_grid_y = END_Y) or player_lives = 0 then
 								game_over <= '1';
@@ -599,7 +597,9 @@ architecture Behavioral of game is
 							
 							if (current_grid_x = mapchange_x) and (current_grid_y = mapchange_y) and (mapchange_active = '1') then
 									 mapchange_active <= '0';
-									 regenerate_request <= '1';
+									 regenerate_req <= '1';
+							else 
+									regenerate_req <= '0';
 							end if;
 						end if;
 						
@@ -647,7 +647,11 @@ architecture Behavioral of game is
 					end if;
 				end process;
 				
-				color_logic : process(pixel_x, pixel_y, player_pixel_x, player_pixel_y, mazeWalls)
+				color_logic : process(pixel_x, pixel_y, player_pixel_x, player_pixel_y, mazeWalls, 
+											 ghost_x, ghost_y, shrink_x, shrink_y, speed_x, speed_y, 
+											 mapchange_x, mapchange_y, ghost_active, shrink_active, 
+											 speed_active, mapchange_active, shrink_powerup)
+											 
 				  variable main_player_size : integer := PLAYER_SIZE;
 				  variable grid_x, grid_y : integer;
 				  variable local_x, local_y : integer;
