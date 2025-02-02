@@ -1,6 +1,0 @@
-7
-~E 1 "../src/counter.vhd" 6 BCD_Counter
-~A 1 "../src/counter.vhd" 15 Behavioral
-~E 1 "../src/TestBench/bcd_counter_TB.vhd" 8 bcd_counter_tb
-~A 1 "../src/TestBench/bcd_counter_TB.vhd" 11 TB_ARCHITECTURE
-~C 1 "../src/TestBench/bcd_counter_TB.vhd" 78 testbench_for_bcd_counter

@@ -1,7 +1,0 @@
-WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: E:/education/Computer-Aided design/my_designs/CADHW03/shift_register_64_bit/src/shift_register.vhd" 
-MESSAGE "Compile Entity "shift_register"" 
-MESSAGE "Compile Architecture "shift_register" of Entity "shift_register"" 
-MESSAGE "Top-level unit(s) detected:" 
-MESSAGE "Entity => shift_register" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]" 

@@ -1,5 +1,0 @@
-WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: E:/education/Computer-Aided design/my_designs/practice/prac/src/Fifo.vhd" 
-MESSAGE "Compile Entity "Fifo"" 
-MESSAGE "Compile Architecture "Fifo" of Entity "Fifo"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]" 

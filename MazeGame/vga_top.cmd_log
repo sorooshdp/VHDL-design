@@ -1,3 +1,0 @@
-xst -intstyle ise -filter "C:/Documents and Settings/Administrator/Desktop/MazeGame/iseconfig/filter.filter" -ifn "C:/Documents and Settings/Administrator/Desktop/MazeGame/vga_top.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/MazeGame/vga_top.syr" 
-ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-2 "vga_top.ngc" vga_top.ngd  
-xst -intstyle ise -filter "C:/Documents and Settings/Administrator/Desktop/MazeGame/iseconfig/filter.filter" -ifn "C:/Documents and Settings/Administrator/Desktop/MazeGame/vga_top.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/MazeGame/vga_top.syr" 

@@ -1,6 +1,0 @@
-64
-~E 1 "../src/serial_to_parallel.vhd" 5 serial_to_parallel
-~A 1 "../src/serial_to_parallel.vhd" 19 serial_to_parallel
-~E 1 "../src/TestBench/serial_to_parallel_TB.vhd" 7 serial_to_parallel_tb
-~A 1 "../src/TestBench/serial_to_parallel_TB.vhd" 10 TB_ARCHITECTURE
-~C 1 "../src/TestBench/serial_to_parallel_TB.vhd" 109 testbench_for_serial_to_parallel

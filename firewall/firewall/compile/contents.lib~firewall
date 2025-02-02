@@ -1,6 +1,0 @@
-122
-~E 1 "../src/firewall.vhd" 5 firewall
-~A 1 "../src/firewall.vhd" 15 firewall
-~E 1 "../src/TestBench/firewall_TB.vhd" 7 firewall_tb
-~A 1 "../src/TestBench/firewall_TB.vhd" 10 TB_ARCHITECTURE
-~C 1 "../src/TestBench/firewall_TB.vhd" 102 testbench_for_firewall

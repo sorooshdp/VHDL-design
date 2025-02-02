@@ -1,6 +1,0 @@
-5
-~E 1 "../src/sequence_generator.vhd" 6 sequence_generator
-~A 1 "../src/sequence_generator.vhd" 14 sequence_generator
-~E 1 "../src/TestBench/sequence_generator_TB.vhd" 7 sequence_generator_tb
-~A 1 "../src/TestBench/sequence_generator_TB.vhd" 10 TB_ARCHITECTURE
-~C 1 "../src/TestBench/sequence_generator_TB.vhd" 58 testbench_for_sequence_generator

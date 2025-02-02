@@ -1,6 +1,0 @@
-6
-~E 1 "../src/circuit.vhd" 4 circuit
-~A 1 "../src/circuit.vhd" 14 circuit
-~E 1 "../src/DualPortRam.vhd" 6 DualPortRam
-~E 1 "../src/Fifo.vhd" 6 Fifo
-~A 1 "../src/Fifo.vhd" 18 Fifo

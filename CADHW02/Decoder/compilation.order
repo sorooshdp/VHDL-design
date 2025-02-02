@@ -1,4 +1,0 @@
-.\src\3-to-8-decoder.vhd
-.\src\custom_circuit.vhd
-.\src\TestBench\decoder3to8_TB.vhd
-.\src\TestBench\circuit_with_xor_and_TB.vhd

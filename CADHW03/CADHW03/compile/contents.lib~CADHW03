@@ -1,6 +1,0 @@
-8
-~E 1 "../src/delay.vhd" 4 delay_examples
-~A 1 "../src/delay.vhd" 11 Behavioral
-~E 1 "../src/TestBench/delay_examples_TB.vhd" 6 delay_examples_tb
-~A 1 "../src/TestBench/delay_examples_TB.vhd" 8 TB_ARCHITECTURE
-~C 1 "../src/TestBench/delay_examples_TB.vhd" 49 testbench_for_delay_examples
